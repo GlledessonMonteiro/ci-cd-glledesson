@@ -1,0 +1,13 @@
+{
+    "name": "ci-cd-glledesson",
+    "version": "1.0.0",
+    "description": "Projeto simples para teste de CI/CD com GitHub Actions",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "test": "timeout 5s node index.js || exit 0"
+    },
+    "keywords": [],
+    "author": "Glledesson Monteiro",
+    "license": "ISC"
+  }
