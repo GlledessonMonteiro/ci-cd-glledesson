@@ -1,28 +1,28 @@
-name: CI/CD Node.js
+name: Planta Baixa da Fábrica
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
-  build-test:
+  construir-planta:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Baixar repositório
+      - name: Baixar código do repositório
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+      - name: Mostrar início da simulação
+        run: echo "Iniciando a criação da planta baixa da fábrica..."
 
-      - name: Instalar dependências
-        run: npm install
+      - name: Criar setores da fábrica
+        run: |
+          echo "Setor 1: Entrada de materiais"
+          echo "Setor 2: Linha de produção"
+          echo "Setor 3: Controle de qualidade"
+          echo "Setor 4: Estoque"
+          echo "Setor 5: Expedição"
 
-      - name: Rodar testes
-        run: npm test
+      - name: Finalizar simulação
+        run: echo "Planta baixa da fábrica criada com sucesso!"
